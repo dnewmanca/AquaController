@@ -1,0 +1,27 @@
+
+<html>
+<head><title>My First Django Template</title></head>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'siteroot/styles.css'%}" />
+<body>
+    <div class="header">
+        AquaController
+    </div>
+
+    <div class="menu">
+        <ul>
+            {% for menuitem in menu %}
+            <li><a class="{{ menuitem.CssClass }}" href="{{ menuitem.Href }}" target="{{ menuitem.Target }}">{{ menuitem.Text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="content_area">
+        {{ content }}
+    </div>
+
+    <div class="content_footer">
+        &nbsp;
+    </div>
+</body>
+</html>

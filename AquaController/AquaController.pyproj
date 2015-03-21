@@ -6,6 +6,7 @@
     <RootNamespace>AquaController</RootNamespace>
     <InterpreterId>{439bb77a-19b4-4cfe-aaef-46fb0fa97362}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
+    <WebBrowserPort>8000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +31,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="siteroot\models.py" />
+    <Compile Include="siteroot\tests.py" />
+    <Compile Include="siteroot\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="siteroot\views.py" />
+    <Compile Include="siteroot\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="AquaController\__init__.py" />
     <Compile Include="AquaController\settings.py" />
@@ -37,10 +45,20 @@
     <Compile Include="AquaController\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AquaController.sqlite3" />
+    <Content Include="siteroot\static\siteroot\images\background.jpg" />
+    <Content Include="siteroot\static\siteroot\styles.css" />
+    <Content Include="siteroot\templates\siteroot\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AquaController\" />
+    <Folder Include="siteroot\" />
+    <Folder Include="siteroot\static\" />
+    <Folder Include="siteroot\static\siteroot\images\" />
+    <Folder Include="siteroot\static\siteroot\" />
+    <Folder Include="siteroot\templates\" />
+    <Folder Include="siteroot\templates\siteroot\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
